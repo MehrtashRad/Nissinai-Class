@@ -152,9 +152,9 @@ See [Architecture / Project Structure](#architecture--project-structure) above.
 
 | | |
 |---|---|
-| ![Login](screenshots/1000132543.png) Login | ![Teacher dashboard](screenshots/1000132545.png) Teacher dashboard |
-| ![Create classroom](screenshots/1000132544.png) Create classroom | ![Join classroom](screenshots/1000132546.png) Join classroom |
-| ![Student dashboard](screenshots/1000132547.png) Student dashboard | ![Whiteboard drawing](screenshots/1000132548.png) Whiteboard — freehand drawing |
+| ![Login](screenshots/login.png) Login | ![Teacher dashboard](screenshots/teacherdashboard.png) Teacher dashboard |
+| ![Create classroom](screenshots/creatclass.png) Create classroom | ![Join classroom](screenshots/enterclass.png) Join classroom |
+| ![Student dashboard](screenshots/studentdashboard.png) Student dashboard | ![Whiteboard drawing](screenshots/class.png) Whiteboard — freehand drawing |
 | ![Whiteboard gesture drawing](screenshots/Ai-mode.jpg) Whiteboard — hand-gesture drawing, live chat, and online users | |
 
 ## Limitations / Notes
