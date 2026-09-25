@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap");
+
+:root {
+    --join-navy-deep: #06101d;
+    --join-navy: #091524;
+    --join-card: #0d1e31;
+
+    --join-blue: #245b82;
+    --join-blue-light: #76a7c9;
+
+    --join-cream: #f1eee5;
+    --join-cream-soft: #d9d7d0;
+
+    --join-gray: #8b96a5;
+    --join-gray-dark: #586678;
+
+    --join-border: rgba(255, 255, 255, 0.07);
+}
+
+
+/* ==============================
+   Base
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+.join-page {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(27, 67, 103, 0.22),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            var(--join-navy-deep),
+            var(--join-navy)
+        );
+
+    color: var(--join-cream);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+}
+
+
+/* ==============================
+   Background
+============================== */
+
+.join-background {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.join-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.12;
+}
+
+.join-glow-one {
+    width: 350px;
+    height: 350px;
+
+    top: -150px;
+    right: -80px;
+
+    background: #245b82;
+}
+
+.join-glow-two {
+    width: 300px;
+    height: 300px;
+
+    bottom: -150px;
+    left: -100px;
+
+    background: #183d5d;
+}
+
+
+/* ==============================
+   Main Container
+============================== */
+
+.join-container {
+    width: min(430px, calc(100% - 36px));
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==============================
+   Brand
+============================== */
+
+.join-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+.join-brand h1 {
+    margin: 0;
+
+    direction: ltr;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+
+    color: var(--join-cream);
+}
+
+.join-brand-line {
+    width: 34px;
+    height: 1px;
+
+    margin-top: 10px;
+
+    background: var(--join-blue-light);
+
+    opacity: 0.6;
+}
+
+
+/* ==============================
+   Card
+============================== */
+
+.join-card {
+    width: 100%;
+
+    padding: 34px 34px 28px;
+
+    border: 1px solid var(--join-border);
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 34, 53, 0.92),
+            rgba(8, 22, 37, 0.96)
+        );
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.32);
+
+    backdrop-filter: blur(18px);
+}
+
+
+/* ==============================
+   Icon
+============================== */
+
+.join-card-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 22px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(36, 91, 130, 0.3),
+            rgba(36, 91, 130, 0.08)
+        );
+
+    border: 1px solid rgba(118, 167, 201, 0.1);
+
+    color: var(--join-blue-light);
+
+    font-size: 26px;
+    font-weight: 300;
+}
+
+
+/* ==============================
+   Header
+============================== */
+
+.join-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.join-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    color: var(--join-blue-light);
+}
+
+.join-header h2 {
+    margin: 0 0 9px;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    color: var(--join-cream);
+}
+
+.join-header p {
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 300;
+
+    line-height: 2;
+
+    color: var(--join-gray);
+}
+/* ==============================
+   Form
+============================== */
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-form-group {
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+.join-form-group label {
+    margin-bottom: 9px;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    color: var(--join-cream-soft);
+}
+
+.join-form-group input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 11px;
+
+    background: rgba(4, 14, 25, 0.62);
+
+    color: var(--join-cream);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.join-form-group input::placeholder {
+    color: #5e6b7a;
+}
+
+.join-form-group input:focus {
+    border-color:
+        rgba(118, 167, 201, 0.55);
+
+    background: rgba(5, 17, 30, 0.9);
+
+    box-shadow:
+        0 0 0 3px rgba(36, 91, 130, 0.1);
+}
+
+.join-input-hint {
+    margin-top: 8px;
+
+    font-size: 9px;
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    color: var(--join-gray-dark);
+
+    text-align: right;
+}
+
+
+/* ==============================
+   Submit
+============================== */
+
+.join-submit-button {
+    width: 100%;
+    height: 49px;
+
+    margin-top: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    border: 1px solid rgba(93, 157, 198, 0.25);
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #245b82,
+            #173e5e
+        );
+
+    color: #f5f2e9;
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(5, 25, 42, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.join-submit-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 17px 35px rgba(5, 25, 42, 0.4);
+}
+
+.join-submit-button:active {
+    transform: translateY(0);
+}
+
+.join-button-arrow {
+    font-size: 17px;
+}
+
+
+/* ==============================
+   Back
+============================== */
+
+.join-back-button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--join-gray);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease;
+}
+
+.join-back-button:hover {
+    color: var(--join-cream-soft);
+}
+
+
+/* ==============================
+   Footer
+============================== */
+
+.join-footer {
+    margin: 22px 0 0;
+
+    font-size: 9px;
+    font-weight: 300;
+
+    color: var(--join-gray-dark);
+
+    text-align: center;
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 480px) {
+
+    .join-container {
+        width: calc(100% - 26px);
+    }
+
+    .join-card {
+        padding: 28px 22px 24px;
+
+        border-radius: 17px;
+    }
+
+    .join-brand h1 {
+        font-size: 22px;
+    }
+
+    .join-header h2 {
+        font-size: 19px;
+    }
+}

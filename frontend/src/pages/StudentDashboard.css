@@ -1,0 +1,771 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap");
+
+:root {
+    --navy-deep: #06101d;
+    --navy: #091524;
+    --navy-card: #0d1e31;
+    --navy-light: #122941;
+
+    --blue: #245b82;
+    --blue-light: #76a7c9;
+
+    --cream: #f1eee5;
+    --cream-soft: #d9d7d0;
+
+    --gray: #8b96a5;
+    --gray-dark: #586678;
+
+    --border: rgba(255, 255, 255, 0.07);
+
+    --danger: #c87979;
+}
+
+/* ------------------------------
+   Base
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+.student-dashboard {
+    min-height: 100vh;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(27, 67, 103, 0.2),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            var(--navy-deep),
+            var(--navy)
+        );
+
+    color: var(--cream);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+}
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.dashboard-header {
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(6, 16, 29, 0.72);
+
+    backdrop-filter: blur(18px);
+
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.dashboard-brand span {
+    direction: ltr;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    color: var(--cream);
+}
+
+.account-area {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.account-avatar {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #245b82,
+            #173e5e
+        );
+
+    color: var(--cream);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1px;
+}
+
+.account-label {
+    font-size: 9px;
+
+    color: var(--gray-dark);
+}
+
+.account-name {
+    font-size: 12px;
+    font-weight: 500;
+
+    color: var(--cream-soft);
+}
+
+/* ------------------------------
+   Content
+------------------------------ */
+
+.dashboard-content {
+    width: min(1180px, calc(100% - 60px));
+
+    margin: 0 auto;
+
+    padding: 58px 0 70px;
+}
+
+/* ------------------------------
+   Welcome
+------------------------------ */
+
+.welcome-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-eyebrow {
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.3px;
+
+    color: var(--blue-light);
+}
+
+.welcome-text h1 {
+    margin: 0 0 8px;
+
+    font-size: 31px;
+    font-weight: 600;
+
+    color: var(--cream);
+}
+
+.welcome-text p {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 300;
+
+    color: var(--gray);
+
+    line-height: 1.9;
+}
+
+/* ------------------------------
+   Join Button
+------------------------------ */
+
+.join-class-button {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 20px;
+
+    border: 1px solid rgba(93, 157, 198, 0.25);
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #245b82,
+            #173e5e
+        );
+
+    color: #f5f2e9;
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 28px rgba(5, 25, 42, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.join-class-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 16px 35px rgba(5, 25, 42, 0.4);
+}
+
+.join-icon {
+    font-size: 20px;
+    font-weight: 300;
+}
+/* ------------------------------
+   Divider
+------------------------------ */
+
+.dashboard-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 43px 0 38px;
+
+    background: var(--border);
+}
+
+/* ------------------------------
+   Section Heading
+------------------------------ */
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    margin: 0 0 5px;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    color: var(--cream);
+}
+
+.section-heading p {
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 300;
+
+    color: var(--gray);
+}
+
+.class-count {
+    padding: 6px 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: var(--gray);
+
+    font-size: 10px;
+}
+
+/* ------------------------------
+   Classroom Grid
+------------------------------ */
+
+.classroom-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.classroom-card {
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 22px;
+
+    border: 1px solid var(--border);
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 37, 59, 0.74),
+            rgba(8, 22, 37, 0.88)
+        );
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.17);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.classroom-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(118, 167, 201, 0.22);
+
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------------------
+   Card Top
+------------------------------ */
+
+.classroom-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.classroom-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(36, 91, 130, 0.18);
+
+    color: var(--blue-light);
+
+    font-size: 17px;
+}
+
+.classroom-status {
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background: rgba(76, 145, 193, 0.08);
+
+    color: #79a9c8;
+
+    font-size: 9px;
+}
+
+/* ------------------------------
+   Card Information
+------------------------------ */
+
+.classroom-info {
+    flex: 1;
+
+    padding-top: 23px;
+}
+
+.classroom-info h3 {
+    margin: 0 0 9px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--cream);
+}
+
+.classroom-info p {
+    margin: 0;
+
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+
+    font-size: 11px;
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color: var(--gray);
+}
+
+/* ------------------------------
+   Card Actions
+------------------------------ */
+
+.classroom-actions {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 22px;
+}
+
+.enter-class-button {
+    flex: 1;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 1px solid rgba(93, 157, 198, 0.18);
+    border-radius: 9px;
+
+    background: rgba(36, 91, 130, 0.16);
+
+    color: #a9c7dc;
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.enter-class-button:hover {
+    background: rgba(36, 91, 130, 0.3);
+
+    color: var(--cream);
+}
+
+.enter-class-button span {
+    font-size: 15px;
+}
+
+.leave-class-button {
+    height: 40px;
+
+    padding: 0 13px;
+
+    border: 1px solid rgba(200, 121, 121, 0.13);
+    border-radius: 9px;
+
+    background: rgba(150, 58, 58, 0.04);
+
+    color: var(--danger);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.leave-class-button:hover {
+    background: rgba(150, 58, 58, 0.12);
+
+    color: #e09595;
+}
+/* ------------------------------
+   Empty State
+------------------------------ */
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 70px 30px;
+
+    border: 1px dashed rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.012);
+
+    text-align: center;
+}
+
+.empty-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 16px;
+
+    background: rgba(36, 91, 130, 0.13);
+
+    color: var(--blue-light);
+
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: var(--cream-soft);
+}
+
+.empty-state p {
+    max-width: 390px;
+
+    margin: 0 0 22px;
+
+    font-size: 11px;
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color: var(--gray);
+}
+
+.empty-state button {
+    height: 40px;
+
+    padding: 0 18px;
+
+    border: 1px solid rgba(93, 157, 198, 0.2);
+    border-radius: 9px;
+
+    background: rgba(36, 91, 130, 0.14);
+
+    color: #9dbdd3;
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.empty-state button:hover {
+    background: rgba(36, 91, 130, 0.26);
+
+    color: var(--cream);
+}
+
+/* ------------------------------
+   Loading
+------------------------------ */
+
+.dashboard-loading {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.loading-spinner {
+    width: 32px;
+    height: 32px;
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-top-color: #6e9fc2;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+.dashboard-loading p {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 300;
+
+    color: var(--gray);
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.dashboard-footer {
+    width: min(1180px, calc(100% - 60px));
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+
+    padding: 20px 0 28px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--gray-dark);
+
+    font-size: 9px;
+}
+
+.dashboard-footer span:first-child {
+    direction: ltr;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    color: #697789;
+}
+
+/* ------------------------------
+   Animations
+------------------------------ */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+
+@media (max-width: 950px) {
+    .classroom-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 680px) {
+    .dashboard-header {
+        padding: 0 20px;
+    }
+
+    .dashboard-content {
+        width: calc(100% - 32px);
+
+        padding-top: 38px;
+    }
+
+    .welcome-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .join-class-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .classroom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-footer {
+        width: calc(100% - 32px);
+
+        flex-direction: column;
+
+        gap: 7px;
+    }
+}
+
+@media (max-width: 430px) {
+    .account-info {
+        display: none;
+    }
+
+    .dashboard-brand span {
+        font-size: 18px;
+    }
+
+    .welcome-text h1 {
+        font-size: 26px;
+    }
+
+    .dashboard-content {
+        width: calc(100% - 26px);
+    }
+
+    .classroom-card {
+        padding: 19px;
+    }
+}

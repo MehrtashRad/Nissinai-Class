@@ -1,0 +1,1271 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap");
+
+
+:root {
+    --teacher-bg: #06101d;
+    --teacher-bg-two: #091524;
+
+    --teacher-card: #0d1e31;
+    --teacher-card-two: #0a1929;
+
+    --teacher-blue: #245b82;
+    --teacher-blue-light: #76a7c9;
+
+    --teacher-cream: #f1eee5;
+    --teacher-cream-soft: #d9d7d0;
+
+    --teacher-gray: #8b96a5;
+    --teacher-gray-dark: #586678;
+
+    --teacher-border: rgba(255, 255, 255, 0.07);
+
+    --teacher-danger: #a85d66;
+    --teacher-danger-soft: rgba(168, 93, 102, 0.1);
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+.teacher-page,
+.teacher-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.teacher-page {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 70% 0%,
+            rgba(36, 91, 130, 0.18),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            var(--teacher-bg),
+            var(--teacher-bg-two)
+        );
+
+    color: var(--teacher-cream);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.teacher-background {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.teacher-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.1;
+}
+
+.teacher-glow-one {
+    width: 500px;
+    height: 500px;
+
+    top: -280px;
+    right: -120px;
+
+    background: #245b82;
+}
+
+.teacher-glow-two {
+    width: 400px;
+    height: 400px;
+
+    bottom: -250px;
+    left: -180px;
+
+    background: #183d5d;
+}
+
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.teacher-wrapper {
+    width: min(1180px, calc(100% - 48px));
+
+    position: relative;
+    z-index: 2;
+
+    margin: 0 auto;
+
+    padding: 38px 0 30px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.teacher-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid var(--teacher-border);
+}
+
+
+.teacher-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.teacher-brand h1 {
+    margin: 0;
+
+    direction: ltr;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+
+    color: var(--teacher-cream);
+}
+
+
+.teacher-brand-line {
+    width: 34px;
+    height: 1px;
+
+    margin-top: 9px;
+
+    background: var(--teacher-blue-light);
+
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+.teacher-account {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 8px 11px 8px 14px;
+
+    border: 1px solid var(--teacher-border);
+    border-radius: 13px;
+
+    background: rgba(11, 29, 47, 0.6);
+}
+
+
+.teacher-account-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #245b82,
+            #173e5e
+        );
+
+    color: var(--teacher-cream);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    direction: ltr;
+}
+
+
+.teacher-account-info {
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+
+.teacher-account-info span {
+    font-size: 8px;
+    font-weight: 300;
+
+    color: var(--teacher-gray);
+}
+
+
+.teacher-account-info strong {
+    margin-top: 2px;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    color: var(--teacher-cream-soft);
+}
+/* =========================================
+   HERO
+========================================= */
+
+.teacher-hero {
+    min-height: 185px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 35px 38px;
+
+    margin-top: 28px;
+
+    border: 1px solid var(--teacher-border);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(16, 37, 58, 0.92),
+            rgba(9, 25, 41, 0.82)
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.18);
+}
+
+
+.teacher-hero-content {
+    max-width: 620px;
+}
+
+
+.teacher-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    color: var(--teacher-blue-light);
+}
+
+
+.teacher-hero h2 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: var(--teacher-cream);
+}
+
+
+.teacher-hero p {
+    max-width: 570px;
+
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 300;
+
+    line-height: 2;
+
+    color: var(--teacher-gray);
+}
+
+
+.teacher-create-button {
+    min-width: 175px;
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(118, 167, 201, 0.18);
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #245b82,
+            #173e5e
+        );
+
+    color: var(--teacher-cream);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.teacher-create-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+}
+
+
+.teacher-create-icon {
+    font-size: 19px;
+    font-weight: 300;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.teacher-section-header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-top: 42px;
+    margin-bottom: 18px;
+}
+
+
+.teacher-section-header span {
+    font-size: 9px;
+    font-weight: 400;
+
+    color: var(--teacher-gray);
+}
+
+
+.teacher-section-header h3 {
+    margin: 4px 0 0;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    color: var(--teacher-cream);
+}
+
+
+.teacher-class-count {
+    display: flex;
+    align-items: baseline;
+
+    gap: 6px;
+
+    color: var(--teacher-gray);
+}
+
+
+.teacher-class-count strong {
+    font-size: 21px;
+    font-weight: 600;
+
+    color: var(--teacher-blue-light);
+}
+
+
+.teacher-class-count span {
+    font-size: 9px;
+}
+
+
+/* =========================================
+   CLASSROOM GRID
+========================================= */
+
+.teacher-classrooms {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   CLASS CARD
+========================================= */
+
+.teacher-class-card {
+    min-width: 0;
+
+    padding: 22px;
+
+    border: 1px solid var(--teacher-border);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 34, 53, 0.94),
+            rgba(8, 22, 37, 0.96)
+        );
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.teacher-class-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(118, 167, 201, 0.15);
+
+    box-shadow:
+        0 24px 55px rgba(0, 0, 0, 0.23);
+}
+
+
+.teacher-card-editing {
+    grid-column: span 1;
+
+    transform: none !important;
+
+    border-color:
+        rgba(118, 167, 201, 0.2);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.teacher-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+
+.teacher-card-symbol {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+
+    background:
+        rgba(36, 91, 130, 0.16);
+
+    border: 1px solid rgba(118, 167, 201, 0.08);
+
+    color: var(--teacher-blue-light);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+    direction: ltr;
+}
+
+
+.teacher-card-menu {
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: var(--teacher-gray);
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.teacher-card-content {
+    min-height: 90px;
+}
+
+
+.teacher-card-content h3 {
+    margin: 0 0 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--teacher-cream);
+}
+
+
+.teacher-card-content p {
+    margin: 0;
+
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+
+    font-size: 10px;
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color: var(--teacher-gray);
+}
+
+
+/* =========================================
+   INVITE
+========================================= */
+
+.teacher-invite {
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    border-radius: 12px;
+
+    background:
+        rgba(3, 12, 21, 0.42);
+}
+
+
+.teacher-invite-label {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 9px;
+}
+
+
+.teacher-invite-label span {
+    font-size: 9px;
+    font-weight: 500;
+
+    color: var(--teacher-cream-soft);
+}
+
+
+.teacher-invite-label small {
+    margin-top: 3px;
+
+    font-size: 8px;
+    font-weight: 300;
+
+    color: var(--teacher-gray-dark);
+}
+
+
+.teacher-invite-code {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.teacher-invite-code code {
+    flex: 1;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: var(--teacher-blue-light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: center;
+
+    letter-spacing: 1.5px;
+
+    direction: ltr;
+}
+
+
+.teacher-invite-code button {
+    height: 34px;
+
+    padding: 0 11px;
+
+    border: 1px solid rgba(118, 167, 201, 0.13);
+    border-radius: 8px;
+
+    background: rgba(36, 91, 130, 0.12);
+
+    color: var(--teacher-blue-light);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.teacher-invite-code button:hover {
+    background: rgba(36, 91, 130, 0.25);
+
+    color: var(--teacher-cream);
+}
+
+
+/* =========================================
+   CARD ACTIONS
+========================================= */
+
+.teacher-card-actions {
+    margin-top: 17px;
+}
+
+
+.teacher-enter-button {
+    width: 100%;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid rgba(118, 167, 201, 0.12);
+    border-radius: 9px;
+
+    background:
+        rgba(36, 91, 130, 0.14);
+
+    color: var(--teacher-cream-soft);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.teacher-enter-button:hover {
+    background:
+        rgba(36, 91, 130, 0.26);
+
+    transform: translateY(-1px);
+}
+
+
+.teacher-enter-button span:last-child {
+    font-size: 15px;
+}
+
+
+.teacher-secondary-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+
+.teacher-edit-button,
+.teacher-delete-button {
+    height: 36px;
+
+    border-radius: 8px;
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.teacher-edit-button {
+    border: 1px solid var(--teacher-border);
+    background: transparent;
+
+    color: var(--teacher-gray);
+}
+
+
+.teacher-edit-button:hover {
+    border-color:
+        rgba(118, 167, 201, 0.2);
+
+    color: var(--teacher-cream-soft);
+
+    background:
+        rgba(255, 255, 255, 0.03);
+}
+
+
+.teacher-delete-button {
+    border: 1px solid rgba(168, 93, 102, 0.12);
+
+    background:
+        transparent;
+
+    color: #9d6970;
+}
+
+
+.teacher-delete-button:hover {
+    border-color:
+        rgba(168, 93, 102, 0.3);
+
+    background:
+        var(--teacher-danger-soft);
+
+    color: #c17a82;
+}
+
+
+/* =========================================
+   EDIT MODE
+========================================= */
+
+.teacher-edit-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+
+.teacher-edit-header span {
+    font-size: 8px;
+
+    color: var(--teacher-blue-light);
+}
+
+
+.teacher-edit-header h3 {
+    margin: 4px 0 0;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--teacher-cream);
+}
+
+
+.teacher-edit-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(36, 91, 130, 0.13);
+
+    color: var(--teacher-blue-light);
+
+    font-size: 16px;
+}
+
+
+.teacher-edit-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.teacher-field {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.teacher-field label {
+    margin-bottom: 8px;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    color: var(--teacher-cream-soft);
+}
+
+
+.teacher-field input,
+.teacher-field textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    outline: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 9px;
+
+    background:
+        rgba(3, 12, 21, 0.55);
+
+    color: var(--teacher-cream);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 10px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.teacher-field input {
+    height: 43px;
+}
+
+
+.teacher-field textarea {
+    resize: vertical;
+
+    min-height: 100px;
+
+    line-height: 1.9;
+}
+
+
+.teacher-field input:focus,
+.teacher-field textarea:focus {
+    border-color:
+        rgba(118, 167, 201, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(36, 91, 130, 0.09);
+}
+
+
+.teacher-edit-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 22px;
+}
+
+
+.teacher-save-button,
+.teacher-cancel-button {
+    height: 40px;
+
+    border-radius: 9px;
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.teacher-save-button {
+    border: 1px solid rgba(118, 167, 201, 0.18);
+
+    background:
+        linear-gradient(
+            135deg,
+            #245b82,
+            #173e5e
+        );
+
+    color: var(--teacher-cream);
+}
+
+
+.teacher-cancel-button {
+    border: 1px solid var(--teacher-border);
+
+    background: transparent;
+
+    color: var(--teacher-gray);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.teacher-empty {
+    min-height: 310px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    border: 1px dashed rgba(118, 167, 201, 0.12);
+    border-radius: 20px;
+
+    background:
+        rgba(10, 26, 42, 0.45);
+
+    text-align: center;
+}
+
+
+.teacher-empty-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(36, 91, 130, 0.14);
+
+    color: var(--teacher-blue-light);
+
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+.teacher-empty h3 {
+    margin: 0 0 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--teacher-cream);
+}
+
+
+.teacher-empty p {
+    max-width: 350px;
+
+    margin: 0 0 20px;
+
+    font-size: 10px;
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color: var(--teacher-gray);
+}
+
+
+.teacher-empty button {
+    height: 41px;
+    padding: 0 20px;
+
+    border: 1px solid rgba(118, 167, 201, 0.16);
+    border-radius: 9px;
+
+    background:
+        rgba(36, 91, 130, 0.18);
+
+    color: var(--teacher-cream-soft);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.teacher-footer {
+    margin-top: 34px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--teacher-border);
+
+    color: var(--teacher-gray-dark);
+
+    font-size: 8px;
+    font-weight: 300;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.teacher-loading {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.teacher-loading-brand {
+    margin-bottom: 25px;
+
+    direction: ltr;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+    color: var(--teacher-cream);
+}
+
+
+.teacher-loading-spinner {
+    width: 25px;
+    height: 25px;
+
+    margin-bottom: 15px;
+
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-top-color: var(--teacher-blue-light);
+
+    border-radius: 50%;
+
+    animation:
+        teacher-spin 0.8s linear infinite;
+}
+
+
+.teacher-loading p {
+    margin: 0;
+
+    font-size: 10px;
+    font-weight: 300;
+
+    color: var(--teacher-gray);
+}
+
+
+@keyframes teacher-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .teacher-classrooms {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 720px) {
+
+    .teacher-wrapper {
+        width: calc(100% - 28px);
+
+        padding-top: 24px;
+    }
+
+    .teacher-header {
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .teacher-account-info {
+        display: none;
+    }
+
+    .teacher-account {
+        padding: 6px;
+    }
+
+    .teacher-hero {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 27px 23px;
+    }
+
+    .teacher-hero h2 {
+        font-size: 23px;
+    }
+
+    .teacher-create-button {
+        width: 100%;
+    }
+
+    .teacher-classrooms {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-section-header {
+        margin-top: 32px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .teacher-brand h1 {
+        font-size: 21px;
+    }
+
+    .teacher-hero {
+        border-radius: 17px;
+    }
+
+    .teacher-class-card {
+        padding: 18px;
+    }
+
+    .teacher-section-header h3 {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,534 @@
+.create-class-page {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(30, 76, 130, 0.18),
+            transparent 42%
+        ),
+        #07111f;
+
+    color: #f1eee5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family:
+        "Vazirmatn",
+        "Tahoma",
+        sans-serif;
+
+    box-sizing: border-box;
+}
+
+.create-class-page *,
+.create-class-page *::before,
+.create-class-page *::after {
+    box-sizing: border-box;
+}
+
+/* -------------------------------- */
+/* Background */
+/* -------------------------------- */
+
+.create-class-background {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.create-class-glow {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.18;
+}
+
+.create-class-glow-one {
+    top: -180px;
+    right: -120px;
+
+    background: #174d86;
+}
+
+.create-class-glow-two {
+    bottom: -220px;
+    left: -120px;
+
+    background: #102f55;
+}
+
+/* -------------------------------- */
+/* Main Container */
+/* -------------------------------- */
+
+.create-class-container {
+    width: 100%;
+    max-width: 540px;
+
+    padding: 45px 24px;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -------------------------------- */
+/* Brand */
+/* -------------------------------- */
+
+.create-class-brand {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.create-class-brand h1 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 31px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #f3efe6;
+}
+
+.create-class-brand-line {
+    width: 42px;
+    height: 2px;
+
+    margin: 12px auto 0;
+
+    border-radius: 10px;
+
+    background: #3976b8;
+}
+
+/* -------------------------------- */
+/* Back Button */
+/* -------------------------------- */
+
+.create-class-back {
+    border: none;
+    background: transparent;
+
+    color: #8997a8;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    margin-bottom: 16px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.create-class-back span:first-child {
+    font-size: 18px;
+}
+
+.create-class-back:hover {
+    color: #dce5ef;
+    transform: translateX(3px);
+}
+
+/* -------------------------------- */
+/* Card */
+/* -------------------------------- */
+
+.create-class-card {
+    width: 100%;
+
+    padding: 38px 40px 34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 35, 57, 0.96),
+            rgba(9, 23, 39, 0.98)
+        );
+
+    border: 1px solid rgba(115, 143, 172, 0.15);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(14px);
+}
+
+/* -------------------------------- */
+/* Header */
+/* -------------------------------- */
+
+.create-class-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.create-class-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 17px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #183c64,
+            #102944
+        );
+
+    border: 1px solid rgba(91, 139, 190, 0.2);
+
+    color: #a9c9e8;
+
+    font-size: 28px;
+    font-weight: 300;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+.create-class-header h2 {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #f1eee5;
+}
+
+.create-class-header p {
+    margin: 10px 0 0;
+
+    color: #8997a8;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* -------------------------------- */
+/* Form */
+/* -------------------------------- */
+
+.create-class-form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+.create-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-form-group label {
+    margin-bottom: 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #d8dce2;
+}
+
+/* -------------------------------- */
+/* Input */
+/* -------------------------------- */
+
+.create-input-wrapper,
+.create-textarea-wrapper {
+    position: relative;
+}
+
+.create-input-icon,
+.create-textarea-icon {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #607b98;
+
+    font-size: 17px;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.create-input-wrapper input,
+.create-textarea-wrapper textarea {
+    width: 100%;
+
+    border: 1px solid rgba(111, 139, 167, 0.18);
+
+    border-radius: 12px;
+
+    background: rgba(5, 17, 30, 0.72);
+
+    color: #eeeae1;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.create-input-wrapper input {
+    height: 50px;
+
+    padding:
+        0 45px
+        0 15px;
+
+    font-size: 13px;
+}
+
+.create-input-wrapper input::placeholder,
+.create-textarea-wrapper textarea::placeholder {
+    color: #566779;
+}
+
+.create-input-wrapper input:focus,
+.create-textarea-wrapper textarea:focus {
+    border-color: rgba(70, 125, 184, 0.7);
+
+    background: rgba(6, 20, 35, 0.9);
+
+    box-shadow:
+        0 0 0 3px rgba(54, 111, 171, 0.1);
+}
+
+/* -------------------------------- */
+/* Textarea */
+/* -------------------------------- */
+
+.create-textarea-icon {
+    top: 20px;
+    transform: none;
+}
+
+.create-textarea-wrapper textarea {
+    min-height: 125px;
+
+    resize: vertical;
+
+    padding:
+        15px 45px
+        15px 15px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+.create-field-hint {
+    margin-top: 7px;
+
+    color: #596979;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+/* -------------------------------- */
+/* Error */
+/* -------------------------------- */
+
+.create-class-error {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 13px;
+
+    border-radius: 10px;
+
+    background: rgba(137, 47, 47, 0.12);
+
+    border: 1px solid rgba(190, 83, 83, 0.2);
+
+    color: #dca4a4;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.create-error-icon {
+    width: 21px;
+    height: 21px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(170, 65, 65, 0.2);
+
+    color: #e49a9a;
+
+    font-weight: 700;
+}
+
+/* -------------------------------- */
+/* Submit Button */
+/* -------------------------------- */
+
+.create-class-button {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 4px;
+
+    border: none;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25598d,
+            #173d64
+        );
+
+    color: #f4f2ec;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    box-shadow:
+        0 10px 25px rgba(13, 48, 82, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.create-class-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    filter: brightness(1.1);
+
+    box-shadow:
+        0 14px 30px rgba(18, 67, 111, 0.32);
+}
+
+.create-class-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.create-class-button:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.6;
+}
+
+.create-button-arrow {
+    font-size: 19px;
+
+    transition: transform 0.2s ease;
+}
+
+.create-class-button:hover .create-button-arrow {
+    transform: translateX(-4px);
+}
+
+/* -------------------------------- */
+/* Footer */
+/* -------------------------------- */
+
+.create-class-footer {
+    margin: 20px 0 0;
+
+    color: #536375;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+/* -------------------------------- */
+/* Responsive */
+/* -------------------------------- */
+
+@media (max-width: 600px) {
+    .create-class-container {
+        padding:
+            30px 18px;
+    }
+
+    .create-class-card {
+        padding:
+            30px 22px 27px;
+
+        border-radius: 18px;
+    }
+
+    .create-class-brand h1 {
+        font-size: 27px;
+    }
+
+    .create-class-header h2 {
+        font-size: 21px;
+    }
+
+}
