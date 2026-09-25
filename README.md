@@ -150,7 +150,12 @@ See [Architecture / Project Structure](#architecture--project-structure) above.
 
 ## Screenshots
 
-_Screenshots will be added here._
+| | |
+|---|---|
+| ![Login](screenshots/1000132543.png) Login | ![Teacher dashboard](screenshots/1000132545.png) Teacher dashboard |
+| ![Create classroom](screenshots/1000132544.png) Create classroom | ![Join classroom](screenshots/1000132546.png) Join classroom |
+| ![Student dashboard](screenshots/1000132547.png) Student dashboard | ![Whiteboard drawing](screenshots/1000132548.png) Whiteboard — freehand drawing |
+| ![Whiteboard gesture drawing](screenshots/1000132549.jpg) Whiteboard — hand-gesture drawing, live chat, and online users | |
 
 ## Limitations / Notes
 
